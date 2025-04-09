@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group input[type="radio"] {
+            width: auto;
+        }
+        .form-group .radio-group {
+            display: flex;
+            gap: 15px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Profile Form</h2>
+        <form id="frmproadd" name="frmproadd" method="post" action="/proadd">
+            <!-- Profile Name -->
+            <div class="form-group">
+                <label for="profilename">Profile Name:</label>
+                <input type="text" id="profile-name" name="profilename" placeholder="Enter profile name" required>
+            </div>
+
+            <!-- Profile Type -->
+            <div class="form-group">
+                <label for="profiletype">Profile Type:</label>
+                <select id="profiletype" name="profiletype" required>
+                    <option value="Regular">Regular</option>
+                    <option value="FTF">FTF</option>
+                    <option value="Sessional">Sessional</option>
+                    <option value="Parttime">Part-time</option>
+                </select>
+            </div>
+
+            <!-- Description -->
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" placeholder="Enter description"></textarea>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <!-- Phone -->
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+
+            <!-- Type (Radio Buttons) -->
+            <div class="form-group">
+                <label>Type:</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="type" value="Local" required> Local
+                    </label>
+                    <label>
+                        <input type="radio" name="type" value="International" required> International
+                    </label>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

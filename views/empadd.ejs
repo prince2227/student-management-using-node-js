@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>This is a HTML view</title>
+</head>
+
+<body style="background-color: #579ae6;">
+    <div style="text-align: center;">
+        <img src="/it2.jpg" style="width: 100px; height: auto;" />
+    </div>
+    <center>
+        <div style="width: 350px;margin-top: 5%;height:450px;border-radius: 0px" class="card">
+            <form id="frmempadd" name="frmempadd" method="post" action="/empadd">
+
+                <h2>Employee Information Form</h2>
+                <section>
+                    <h3>Personal Details</h3>
+                    <label for="employeeName">Employee Name:</label><br>
+                    <input type="text" id="employeeName" name="employeeName"><br>
+                    <label for="dob">Date of Birth:</label><br>
+                    <input type="date" id="dob" name="dob">
+                </section>
+                <section>
+                    <h3>Contact Information</h3>
+                    <label for="employeeEmail">Employee Email:</label><br>
+                    <input type="email" id="employeeEmail" name="employeeEmail"><br>
+                    <label for="employeeContact">Employee Contact:</label><br>
+                    <input type="text" id="employeeContact" name="employeeContact">
+                </section>
+                <section>
+                    <h3>Address</h3>
+                    <label for="addressLine1">Address Line 1:</label><br>
+                    <input type="text" id="addressLine1" name="addressLine1"><br>
+                    <label for="addressLine2">Address Line 2:</label><br>
+                    <input type="text" id="addressLine2" name="addressLine2"><br>
+                    <label for="city">City:</label><br>
+                    <input type="text" id="city" name="city"><br>
+                    <label for="state">State:</label><br>
+                    <input type="text" id="state" name="state"><br>
+                    <label for="zip">Zip:</label><br>
+                    <input type="text" id="zip" name="zip">
+                </section>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </center>
+</body>
+
+</html>
